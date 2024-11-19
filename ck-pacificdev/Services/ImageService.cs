@@ -40,8 +40,11 @@ namespace ck_pacificdev.Services
                     imageUrl = image.Url;
                 }
             }
-            else if (userIdentifier.Contains("a") || userIdentifier.Contains("e") || userIdentifier.Contains("i")
-                     || userIdentifier.Contains("o") || userIdentifier.Contains("u"))
+            else if (userIdentifier.Contains("a", System.StringComparison.CurrentCultureIgnoreCase) 
+                     || userIdentifier.Contains("e", System.StringComparison.CurrentCultureIgnoreCase) 
+                     || userIdentifier.Contains("i", System.StringComparison.CurrentCultureIgnoreCase)
+                     || userIdentifier.Contains("o", System.StringComparison.CurrentCultureIgnoreCase) 
+                     || userIdentifier.Contains("u", System.StringComparison.CurrentCultureIgnoreCase))
             {
                 imageUrl = "https://api.dicebear.com/8.x/pixel-art/png?seed=vowel&size=150";
             }
